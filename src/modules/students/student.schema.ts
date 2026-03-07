@@ -10,8 +10,8 @@ const CreateStudentSchema = {
       'gender', 
       'guardian_contact', 
       'address',
-      'dateOfBirth',
-      
+      'dateOfBirth'
+
     ],
     properties: {
       firstName: { type: 'string' },
@@ -19,9 +19,8 @@ const CreateStudentSchema = {
       age: { type: 'number' },
       gender: { type: 'string', enum: ['male', 'female', 'other'] },
       guardian_contact: { type: 'string' },
-      address: { type: 'string' }, 
+      address: { type: 'string' },
       dateOfBirth: { type: 'string', format: 'date' }
-
     }
   }
 };

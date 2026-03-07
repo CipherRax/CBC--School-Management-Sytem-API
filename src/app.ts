@@ -11,6 +11,8 @@ fastify.register(supabasePlugin);
 fastify.register(studentModule, { prefix: '/api/v1/students' });
 
 fastify.listen({ port: 3000 }, (err) => {
+  console.log("Server started at port 3000 ...");
+  
   if (err) {
     fastify.log.error(err);
     process.exit(1);
