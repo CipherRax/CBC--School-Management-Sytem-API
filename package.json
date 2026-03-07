@@ -23,15 +23,11 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@supabase/supabase-js": "^2.98.0",
     "axios": "^1.13.6",
     "dotenv": "^17.3.1",
+    "express": "^5.2.1",
     "fastify": "^5.8.2",
     "fastify-plugin": "^5.1.0"
-=======
-    "dotenv": "^17.3.1",
-    "express": "^5.2.1"
->>>>>>> mulandi-changes
   }
 }
