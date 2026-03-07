@@ -15,5 +15,10 @@
   "type": "commonjs",
   "devDependencies": {
     "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@supabase/supabase-js": "^2.98.0",
+    "dotenv": "^17.3.1",
+    "fastify": "^5.8.2"
   }
 }
