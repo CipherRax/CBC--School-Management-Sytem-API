@@ -7,20 +7,31 @@
     "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "tsx watch src/app.ts",
+    "build": "tsc",
+    "start": "node dist/app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "devDependencies": {
+    "@types/express": "^5.0.6",
+    "@types/node": "^25.3.5",
+    "tsx": "^4.21.0",
     "typescript": "^5.9.3"
   },
   "dependencies": {
+<<<<<<< HEAD
     "@supabase/supabase-js": "^2.98.0",
     "axios": "^1.13.6",
     "dotenv": "^17.3.1",
     "fastify": "^5.8.2",
     "fastify-plugin": "^5.1.0"
+=======
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+>>>>>>> mulandi-changes
   }
 }
