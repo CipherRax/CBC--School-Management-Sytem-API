@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import Fastify from 'fastify';
 import supabasePlugin from './modules/common/plugins/supabase.js';
 import studentModule from './modules/students/index.js';
