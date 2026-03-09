@@ -10,9 +10,15 @@ declare module 'fastify' {
 }
 
 export default fp(async (fastify: FastifyInstance) => {
+  const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY || process.env.SUPABASE_ANON_KEY;
+
+  if (!process.env.SUPABASE_URL || !supabaseKey) {
+    throw new Error('Missing Supabase credentials in environment variables.');
+  }
+
   const supabase = createClient(
-    process.env.SUPABASE_URL!,
-    process.env.SUPABASE_ANON_KEY!
+    process.env.SUPABASE_URL,
+    supabaseKey
   );
 
   fastify.decorate('supabase', supabase);

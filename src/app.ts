@@ -2,6 +2,7 @@ import 'dotenv/config';
 import Fastify from 'fastify';
 import supabasePlugin from './modules/common/plugins/supabase.js';
 import studentModule from './modules/students/index.js';
+import academicRoutes from './modules/students/academic.routes.js';
 
 const fastify = Fastify({ logger: true });
 const PORT = Number(process.env.PORT) || 3000;
@@ -15,6 +16,9 @@ fastify.log.info('✅ Supabase plugin registered');
 // ── Register Feature Modules ─────────────────────────
 fastify.register(studentModule, { prefix: '/api/v1/students' });
 fastify.log.info('✅ Student module registered at /api/v1/students');
+
+fastify.register(academicRoutes, { prefix: '/api/v1/academics' });
+fastify.log.info('✅ Academic module registered at /api/v1/academics');
 
 // ── Health Check ─────────────────────────────────────
 fastify.get('/health', async (_request, _reply) => {
