@@ -1225,6 +1225,9 @@ interface AuditLog {
 
 ---
 
+## Contributing
+
+This project is under active development. Contributions are welcome for open-source modules.
 
 ```bash
 # Fork the repository
